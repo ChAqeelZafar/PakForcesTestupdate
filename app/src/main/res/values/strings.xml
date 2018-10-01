@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PakForcesTestupdate</string>
+
+
+    <string name="App_ID">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="Main_Activity_Ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Subject_loading_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Subject_Activity_Ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Chapter_loading_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Chapter_Activity_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Prepration_up_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Prepration_down_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Quiz_up_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Quiz_down_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Result_up_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Result_down_ad">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="Subject_item_interstialAd">ca-app-pub-3940256099942544/1033173712</string>
+</resources>

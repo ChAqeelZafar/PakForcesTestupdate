@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "933546097574",
+    "firebase_url": "https://pakforcestestupdate.firebaseio.com",
+    "project_id": "pakforcestestupdate",
+    "storage_bucket": "pakforcestestupdate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933546097574:android:00d843fd8d872f31",
+        "android_client_info": {
+          "package_name": "com.aqeel.johnwick.pakforcestestupdate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933546097574-iighj3v0uor5qc3mq0hpmqp3vssdip5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aqeel.johnwick.pakforcestestupdate",
+            "certificate_hash": "76cbf74fa140327de1dfd089302644bbc7f3c77c"
+          }
+        },
+        {
+          "client_id": "933546097574-mdtg2bi8mqhld4vt44v7oblipkmqu6bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaoNdFPT-t2x4T6n4H0VX1VdQWg5dpRHU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933546097574-mdtg2bi8mqhld4vt44v7oblipkmqu6bu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
