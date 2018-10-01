@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //loadAd();
+        loadAd();
 
         forceName = getIntent().getStringExtra("forceName");
 
@@ -256,13 +256,13 @@ public class MainActivity extends AppCompatActivity {
             shareBtn.setVisibility(View.VISIBLE);
         }
     }
-//
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adView = findViewById(R.id.main_adView);
-//        AdRequest request = new AdRequest.Builder().build();
-//
-//        adView.loadAd(request);
-//    }
+
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adView = findViewById(R.id.main_adView);
+        AdRequest request = new AdRequest.Builder().build();
+
+        adView.loadAd(request);
+    }
 }

@@ -44,7 +44,7 @@ public class ChaptersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapters);
 
-        //loadAd();
+        loadAd();
 
 
 
@@ -174,15 +174,15 @@ public class ChaptersActivity extends AppCompatActivity {
     }
 
 
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adView = findViewById(R.id.chapters_adView);
-//        loadingAdview = findViewById(R.id.chapter_loading_adView);
-//        AdRequest request = new AdRequest.Builder().build();
-//        AdRequest requestLoading = new AdRequest.Builder().build();
-//
-//        loadingAdview.loadAd(requestLoading);
-//        adView.loadAd(request);
-//    }
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adView = findViewById(R.id.chapters_adView);
+        loadingAdview = findViewById(R.id.chapter_loading_adView);
+        AdRequest request = new AdRequest.Builder().build();
+        AdRequest requestLoading = new AdRequest.Builder().build();
+
+        loadingAdview.loadAd(requestLoading);
+        adView.loadAd(request);
+    }
 }

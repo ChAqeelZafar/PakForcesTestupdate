@@ -50,7 +50,7 @@ public class PreprationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prepration);
 
-        //loadAd();
+        loadAd();
 
         startQuizBtn = findViewById(R.id.prepration_btn_startQuiz);
         totalQuestionsText = findViewById(R.id.prepration_text_totalQuestions);
@@ -280,17 +280,17 @@ public class PreprationActivity extends AppCompatActivity {
                 "Share Using"));
     }
 
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adViewUp = findViewById(R.id.prepration_up_adView);
-//        adViewDown = findViewById(R.id.prepration_down_adView);
-//        AdRequest requestUp = new AdRequest.Builder().build();
-//        AdRequest requestDown = new AdRequest.Builder().build();
-//
-//
-//        adViewUp.loadAd(requestUp);
-//        adViewDown.loadAd(requestDown);
-//    }
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adViewUp = findViewById(R.id.prepration_up_adView);
+        adViewDown = findViewById(R.id.prepration_down_adView);
+        AdRequest requestUp = new AdRequest.Builder().build();
+        AdRequest requestDown = new AdRequest.Builder().build();
+
+
+        adViewUp.loadAd(requestUp);
+        adViewDown.loadAd(requestDown);
+    }
 }
 

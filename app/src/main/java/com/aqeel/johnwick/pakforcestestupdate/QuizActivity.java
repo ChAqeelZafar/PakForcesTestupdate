@@ -51,7 +51,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        //loadAd();
+        loadAd();
 
 
         statementText = findViewById(R.id.quiz_questionStatement);
@@ -282,18 +282,18 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adViewUp = findViewById(R.id.quiz_up_adView);
-//        adViewDown = findViewById(R.id.quiz_down_adView);
-//        AdRequest requestUp = new AdRequest.Builder().build();
-//        AdRequest requestDown = new AdRequest.Builder().build();
-//
-//
-//        adViewUp.loadAd(requestUp);
-//        adViewDown.loadAd(requestDown);
-//    }
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adViewUp = findViewById(R.id.quiz_up_adView);
+        adViewDown = findViewById(R.id.quiz_down_adView);
+        AdRequest requestUp = new AdRequest.Builder().build();
+        AdRequest requestDown = new AdRequest.Builder().build();
+
+
+        adViewUp.loadAd(requestUp);
+        adViewDown.loadAd(requestDown);
+    }
 
 
 }

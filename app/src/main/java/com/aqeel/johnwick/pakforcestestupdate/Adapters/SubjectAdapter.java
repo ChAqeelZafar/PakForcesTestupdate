@@ -55,7 +55,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.Holder>{
 
         interstitialAd = new InterstitialAd(ctx);
         interstitialAd.setAdUnitId(ctx.getString(R.string.Subject_item_interstialAd));
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+        AdRequest adRequest = new AdRequest.Builder()
                 .build();
         interstitialAd.loadAd(adRequest);
 

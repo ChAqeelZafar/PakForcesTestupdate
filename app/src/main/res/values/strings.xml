@@ -1,19 +1,30 @@
 <resources>
-    <string name="app_name">PakForcesTestupdate</string>
+    <string name="app_name">Pak Forces Test</string>
 
 
-    <string name="App_ID">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="Main_Activity_Ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Subject_loading_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Subject_Activity_Ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Chapter_loading_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Chapter_Activity_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Prepration_up_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Prepration_down_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Quiz_up_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Quiz_down_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Result_up_ad">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="Result_down_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="App_ID">ca-app-pub-5057257651105810~9029272743</string>
 
-    <string name="Subject_item_interstialAd">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="Main_Activity_Ad">ca-app-pub-5057257651105810/8322410328</string>
+
+    <string name="Subject_loading_ad">ca-app-pub-5057257651105810/7052301508</string>
+
+    <string name="Subject_Activity_Ad">ca-app-pub-5057257651105810/4059306653</string>
+
+    <string name="Chapter_loading_ad">ca-app-pub-5057257651105810/2363081604</string>
+
+    <string name="Chapter_Activity_ad">ca-app-pub-5057257651105810/6183617558</string>
+
+    <string name="Prepration_up_ad">ca-app-pub-5057257651105810/3665265428</string>
+
+    <string name="Prepration_down_ad">ca-app-pub-5057257651105810/4435136202</string>
+
+    <string name="Quiz_up_ad">ca-app-pub-5057257651105810/9447364702</string>
+
+    <string name="Quiz_down_ad">ca-app-pub-5057257651105810/2160612060</string>
+
+    <string name="Result_up_ad">ca-app-pub-5057257651105810/4195038025</string>
+
+    <string name="Result_down_ad">ca-app-pub-5057257651105810/7033379387</string>
+
+    <string name="Subject_item_interstialAd">ca-app-pub-5057257651105810/1788366530</string>
 </resources>

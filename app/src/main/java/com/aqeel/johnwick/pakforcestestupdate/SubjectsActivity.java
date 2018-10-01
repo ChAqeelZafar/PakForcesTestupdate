@@ -34,7 +34,6 @@ public class SubjectsActivity extends AppCompatActivity {
     FirebaseFirestore firestore;
     RecyclerView recyclerView;
     List<Subject> subjectList = new ArrayList<>();
-    String NTS = "nts";
     CardView loadingCard ;
     AdView adView, loadingAdview;
 
@@ -46,7 +45,7 @@ public class SubjectsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subjects);
 
-        //loadAd();
+        loadAd();
 
 
 
@@ -175,16 +174,16 @@ public class SubjectsActivity extends AppCompatActivity {
                 "Share Using"));
     }
 
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adView = findViewById(R.id.subject_adView);
-//        loadingAdview = findViewById(R.id.subject_loading_adView);
-//        AdRequest request = new AdRequest.Builder().build();
-//        AdRequest requestLoading = new AdRequest.Builder().build();
-//
-//
-//        adView.loadAd(request);
-//        loadingAdview.loadAd(requestLoading);
-//    }
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adView = findViewById(R.id.subject_adView);
+        loadingAdview = findViewById(R.id.subject_loading_adView);
+        AdRequest request = new AdRequest.Builder().build();
+        AdRequest requestLoading = new AdRequest.Builder().build();
+
+
+        adView.loadAd(request);
+        loadingAdview.loadAd(requestLoading);
+    }
 }

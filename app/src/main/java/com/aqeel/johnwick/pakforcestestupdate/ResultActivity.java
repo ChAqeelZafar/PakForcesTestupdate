@@ -26,7 +26,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        //loadAd();
+        loadAd();
         subjectnameText = findViewById(R.id.result_text_subjectname);
         percentText = findViewById(R.id.result_text_percentage);
         attemptText = findViewById(R.id.result_text_attempt);
@@ -131,16 +131,16 @@ public class ResultActivity extends AppCompatActivity {
                 "Share Using"));
     }
 
-//    void loadAd(){
-//
-//        MobileAds.initialize(this, getString(R.string.App_ID));
-//        adViewUp = findViewById(R.id.result_up_adView);
-//        adViewDown = findViewById(R.id.result_down_adView);
-//        AdRequest requestUp = new AdRequest.Builder().build();
-//        AdRequest requestDown = new AdRequest.Builder().build();
-//
-//
-//        adViewUp.loadAd(requestUp);
-//        adViewDown.loadAd(requestDown);
-//    }
+    void loadAd(){
+
+        MobileAds.initialize(this, getString(R.string.App_ID));
+        adViewUp = findViewById(R.id.result_up_adView);
+        adViewDown = findViewById(R.id.result_down_adView);
+        AdRequest requestUp = new AdRequest.Builder().build();
+        AdRequest requestDown = new AdRequest.Builder().build();
+
+
+        adViewUp.loadAd(requestUp);
+        adViewDown.loadAd(requestDown);
+    }
 }
