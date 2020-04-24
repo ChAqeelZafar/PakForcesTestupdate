@@ -137,14 +137,18 @@ public class PreprationActivity extends AppCompatActivity {
     }
 
     void printQuestion(int index){
-        Question question = questionList.get(index);
-        totalQuestionsText.setText((index+1) + "/" + questionList.size());
-        statementText.setText(question.getStatement());
-        option1Text.setText(question.getOption1());
-        option2Text.setText(question.getOption2());
-        option3Text.setText(question.getOption3());
-        option4Text.setText(question.getOption4());
-        correctText.setText("CORRECT : " + question.getCorrect());
+        try {
+            Question question = questionList.get(index);
+            totalQuestionsText.setText((index + 1) + "/" + questionList.size());
+            statementText.setText(question.getStatement());
+            option1Text.setText(question.getOption1());
+            option2Text.setText(question.getOption2());
+            option3Text.setText(question.getOption3());
+            option4Text.setText(question.getOption4());
+            correctText.setText("CORRECT : " + question.getCorrect());
+        }catch (Exception e){
+            Toast.makeText(PreprationActivity.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+        }
         isLoading(false);
     }
 

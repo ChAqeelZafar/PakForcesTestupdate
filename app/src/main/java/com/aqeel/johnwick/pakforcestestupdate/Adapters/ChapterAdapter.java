@@ -15,6 +15,10 @@ import com.aqeel.johnwick.pakforcestestupdate.Models.Chapter;
 import com.aqeel.johnwick.pakforcestestupdate.PreprationActivity;
 import com.aqeel.johnwick.pakforcestestupdate.R;
 import com.aqeel.johnwick.pakforcestestupdate.SubjectsActivity;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +30,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.Holder> {
     List<Chapter> chaptersList = new ArrayList<>();
     Context ctx ;
-
+    InterstitialAd interstitialAd;
 
     public ChapterAdapter(List<Chapter> chaptersList, ChaptersActivity ctx) {
         this.chaptersList = chaptersList;
@@ -36,6 +40,16 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.Holder> 
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        MobileAds.initialize(ctx,
+                ctx.getString(R.string.App_ID));
+
+        interstitialAd = new InterstitialAd(ctx);
+        interstitialAd.setAdUnitId(ctx.getString(R.string.Chapter_item_interstialAd));
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        interstitialAd.loadAd(adRequest);
+
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chapterviewholder, parent, false);
         Holder holder = new Holder(view);
         return holder;
@@ -50,11 +64,35 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.Holder> 
             public void onClick(View v) {
 
                 if(haveNetworkConnection()) {
-                    Intent intent = new Intent(ctx, PreprationActivity.class);
-                    intent.putExtra("chapterName", chapter.getChapterName());
-                    intent.putExtra("subjectId", chapter.getSubjectId());
-                    intent.putExtra("chapterId", chapter.getChapterId());
-                    ctx.startActivity(intent);
+
+
+                    if(interstitialAd.isLoaded()) {
+                        // Step 1: Display the interstitial
+                        interstitialAd.show();
+                        // Step 2: Attach an AdListener
+                        interstitialAd.setAdListener(new AdListener() {
+                            @Override
+                            public void onAdClosed() {
+                                // Step 2.1: Load another ad
+                                AdRequest adRequest = new AdRequest.Builder().build();
+                                interstitialAd.loadAd(adRequest);
+
+                                // Step 2.2: Start the new activity
+                                Intent intent = new Intent(ctx, PreprationActivity.class);
+                                intent.putExtra("chapterName", chapter.getChapterName());
+                                intent.putExtra("subjectId", chapter.getSubjectId());
+                                intent.putExtra("chapterId", chapter.getChapterId());
+                                ctx.startActivity(intent);
+                            }
+                        });
+                    }else {
+
+                        Intent intent = new Intent(ctx, PreprationActivity.class);
+                        intent.putExtra("chapterName", chapter.getChapterName());
+                        intent.putExtra("subjectId", chapter.getSubjectId());
+                        intent.putExtra("chapterId", chapter.getChapterId());
+                        ctx.startActivity(intent);
+                    }
                 }
                 else{
                     Toast.makeText(ctx, "Internet is Unavailble\nConnect to the Internet", Toast.LENGTH_SHORT).show();

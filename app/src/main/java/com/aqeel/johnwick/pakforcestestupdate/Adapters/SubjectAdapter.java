@@ -90,7 +90,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.Holder>{
                             @Override
                             public void onAdClosed() {
                                 // Step 2.1: Load another ad
-                                AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                                AdRequest adRequest = new AdRequest.Builder()
                                         .build();
                                 interstitialAd.loadAd(adRequest);
 
